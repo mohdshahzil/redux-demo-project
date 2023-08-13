@@ -29,6 +29,13 @@ const counterReducer = (state = initialState, action) => {
     };
   }
 
+  if (action.type === "reset") {
+    return {
+      counter: 0,
+      showCounter: state.showCounter,
+    };
+  }
+
   return state;
 };
 
